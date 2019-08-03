@@ -8,7 +8,7 @@
     "serve": "vue-cli-service serve --open",
     "build": "node build/build.js",
     "start": "node server.js",
-    "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build",
+    "heroku-postbuild": "npm install  --no-shrinkwrap && npm run build",
     "e2e": "node test/e2e/runner.js",
     "lint": "vue-cli-service lint",
     "dev": "vue-cli-service serve --open",
