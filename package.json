@@ -6,8 +6,8 @@
   "author": "mavusogiftntokozo@gmail.com",
   "scripts": {
     "serve": "vue-cli-service serve --open",
-    "build": "webpack",
     "start": "node server.js",
+    "build": "vue-cli-service build",
     "heroku-postbuild": "npm install  --no-shrinkwrap && npm run build",
     "e2e": "node test/e2e/runner.js",
     "lint": "vue-cli-service lint",
