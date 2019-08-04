@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <div class="row">
       <div class="col-lg-12 col-md-12">
         <card
@@ -10,7 +9,7 @@
           <h4
             slot="header"
             class="card-title"
-          >{{$t('dashboard.simpleTable')}}</h4>
+          >{{$t('Top profitable products')}}</h4>
           <div class="table-responsive">
             <user-table></user-table>
           </div>
