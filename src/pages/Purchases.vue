@@ -9,30 +9,7 @@
                 <h5 class="card-category">Daily</h5>
                 <h2 class="card-title">Purchases</h2>
               </div>
-              <div class="col-sm-6">
-                <div
-                  class="btn-group btn-group-toggle"
-                  :class="isRTL ? 'float-left' : 'float-right'"
-                  data-toggle="buttons"
-                >
-                  <label
-                    v-for="(option, index) in bigLineChartCategories"
-                    :key="option"
-                    class="btn btn-sm btn-primary btn-simple"
-                    :class="{active: bigLineChart.activeIndex === index}"
-                    :id="index"
-                  >
-                    <input
-                      type="radio"
-                      @click="initBigChart(index)"
-                      name="options"
-                      autocomplete="off"
-                      :checked="bigLineChart.activeIndex === index"
-                    >
-                    {{option}}
-                  </label>
-                </div>
-              </div>
+
             </div>
           </template>
           <div class="chart-area">
@@ -51,7 +28,7 @@
       </div>
     </div>
     <div class="row row-eq-height">
-      <div class="col-8">
+      <div class="col-md-8">
         <card :title="table1.title">
           <div class="table-responsive">
             <base-table
@@ -63,8 +40,8 @@
           </div>
         </card>
       </div>
-      <div class="col-4">
-        <card>
+      <div class="col-md-4 pd-2">
+        <card class="container-fluid">
           <h5
             slot="header"
             class="title"
@@ -79,8 +56,8 @@
               </base-input>
             </div>
           </div>
-          <div class="row container-fluid">
-            <div class="col-md-12 pr-md-1">
+          <div class="row">
+            <div class="col-md-12">
               <base-input
                 label="Description"
                 v-model="model.description"
@@ -90,7 +67,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-8 pr-md-1">
+            <div class="col-md-8">
               <base-input
                 label="Unit unit_price"
                 v-model="model.unit_unit_price"
@@ -98,17 +75,17 @@
               >
               </base-input>
             </div>
-            <div class="col-md-4 pr-md-1">
+            <div class="col-md-4">
               <base-input
                 label="Quantity"
                 v-model="model.quantity"
-                placeholder="City"
+                placeholder="Quantity"
               >
               </base-input>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-12 pr-md-1">
+            <div class="col-md-12">
               <base-input
                 label="Total total_cost"
                 placeholder="Total total_cost of the purchase"
@@ -282,7 +259,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
 .row-eq-height {
   display: -webkit-box;
   display: -webkit-flex;

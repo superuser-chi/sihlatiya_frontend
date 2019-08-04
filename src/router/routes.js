@@ -6,6 +6,7 @@ import NotFound from "@/pages/NotFoundPage.vue";
 const Dashboard = () => import( /* webpackChunkName: "dashboard" */ "@/pages/Dashboard.vue");
 const Cashflow = () => import( /* webpackChunkName: "common" */ "@/pages/Cashflow.vue");
 const Notifications = () => import( /* webpackChunkName: "common" */ "@/pages/Notifications.vue");
+const Recommendations = () => import( /* webpackChunkName: "common" */ "@/pages/Recommendations.vue");
 const Maps = () => import( /* webpackChunkName: "common" */ "@/pages/Maps.vue");
 const BreakEvenAnalysis = () => import( /* webpackChunkName: "common" */ "@/pages/BreakEvenAnalysis.vue");
 const Purchases = () => import( /* webpackChunkName: "common" */ "@/pages/Purchases.vue");
@@ -54,9 +55,9 @@ const routes = [{
 
       },
       {
-        path: "typography",
-        name: "typography",
-        component: Typography
+        path: "recommendations",
+        name: "recommendations",
+        component: Recommendations
       },
       {
         path: "table-list",

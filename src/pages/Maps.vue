@@ -1,19 +1,128 @@
 <template>
-  <card
-    type="plain"
-    title="Google Maps"
-  >
-    <div
-      id="map"
-      class="map"
+  <div class="wrapper">
+    <base-header
+      type="gradient-success"
+      class="pb-6 pb-2 pt-md-8"
+      id="status-header"
     >
+      <div class="row">
+        <div class="col-md-12">
+          <card class="container-fluid">
+            <div class="row">
+              <div class="dropdown col-md-12">
+                <button
+                  class="btn btn-secondary dropdown-toggle btn-block"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Select Product
+                </button>
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                  >Action</a>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                  >Another action</a>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                  >Something else here</a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <base-button
+                slot="footer"
+                type="primary"
+                fill
+              >Add</base-button>
+            </div>
+          </card>
+        </div>
+      </div>
+      <!-- Card stats -->
+      <div class="row">
+        <div class="col-xl-4 col-lg-6">
+          <stats-card
+            title="Total Suppliers"
+            type="gradient-orange"
+            sub-title="2,356"
+            icon="ni ni-chart-pie-35"
+            class="mb-4 mb-xl-0 text-white"
+          >
+
+            <template slot="footer">
+              <span class="mr-2"><i class="fa fa-arrow-up"></i> 12.18%</span>
+              <span class="text-nowrap">Since last month</span>
+            </template>
+          </stats-card>
+        </div>
+        <div class="col-xl-4 col-lg-6">
+          <stats-card
+            title="Standard price"
+            type="gradient-green"
+            sub-title="E10"
+            icon="ni ni-money-coins"
+            class="mb-4 mb-xl-0"
+          >
+
+            <template slot="footer">
+              <span class="mr-2"><i class="fa fa-arrow-down"></i> 5.72%</span>
+              <span class="text-nowrap">Since last month</span>
+            </template>
+          </stats-card>
+
+        </div>
+        <div class="col-xl-4 col-lg-6">
+          <stats-card
+            title="Rating"
+            type="gradient-info"
+            sub-title="49,65%"
+            icon="ni ni-chart-bar-32"
+            class="mb-4 mb-xl-0"
+          >
+
+            <template slot="footer">
+              <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 54.8%</span>
+              <span class="text-nowrap">Since last month</span>
+            </template>
+          </stats-card>
+        </div>
+      </div>
+    </base-header>
+    <div class="row">
+      <card
+        type="plain"
+        title="Google Maps"
+      >
+        <div
+          id="map"
+          class="map"
+        >
+        </div>
+      </card>
     </div>
-  </card>
+  </div>
 </template>
 <script>
+import { BaseHeader, StatsCard } from "@/components";
+
 export default {
+  components: {
+    BaseHeader,
+    StatsCard
+  },
   mounted () {
-    let myLatlng = new window.google.maps.LatLng(40.748817, -73.985428);
+    let myLatlng = new window.google.maps.LatLng(-26.481857, 31.312565);
     let mapOptions = {
       zoom: 13,
       center: myLatlng,
@@ -221,5 +330,9 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
+#status-header .card {
+  background: var(--green) !important;
+  color: aliceblue;
+}
 </style>

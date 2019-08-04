@@ -71,7 +71,7 @@
     </base-header>
     <div class="row">
       <div
-        class="col-6 bg-primary"
+        class="col-md-6 bg-primary"
         id="receipts"
       >
         <card
@@ -92,7 +92,7 @@
           </div>
         </card>
       </div>
-      <div class="col-6 bg-warning">
+      <div class="col-md-6 bg-warning">
         <card
           :title="table2.title"
           class="card-plain"
@@ -218,7 +218,7 @@ export default {
     console.log("We are here")  }
 };
 </script>
-<style>
+<style scoped>
 html {
   overflow: scroll;
   overflow-x: hidden;

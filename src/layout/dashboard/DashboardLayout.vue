@@ -32,6 +32,11 @@
           :name="$t('Market Analysis')"
           icon="tim-icons icon-map-big"
         />
+        <sidebar-link
+          to="/recommendations"
+          :name="$t('Product Recommendations')"
+          icon="tim-icons icon-light-3"
+        />
       </template>
     </side-bar>
     <div class="main-panel">
