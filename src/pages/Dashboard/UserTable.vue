@@ -46,6 +46,7 @@ const tableData = [
     markup: "E E 0.15",
   },
 ]
+
 export default {
   components: {
     BaseTable
