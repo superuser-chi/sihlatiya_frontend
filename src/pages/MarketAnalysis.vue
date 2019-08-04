@@ -44,7 +44,7 @@
                 slot="footer"
                 type="primary"
                 fill
-              >Add</base-button>
+              >analyse</base-button>
             </div>
           </card>
         </div>

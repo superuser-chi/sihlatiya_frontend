@@ -28,7 +28,7 @@
           icon="tim-icons icon-chart-bar-32"
         />
         <sidebar-link
-          to="/maps"
+          to="/marketAnalysis"
           :name="$t('Market Analysis')"
           icon="tim-icons icon-map-big"
         />
