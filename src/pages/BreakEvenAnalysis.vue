@@ -17,7 +17,7 @@
           >
 
             <template slot="footer">
-              <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 12.18%</span>
+              <span class="mr-2"><i class="fa fa-arrow-up"></i> 12.18%</span>
               <span class="text-nowrap">Since last month</span>
             </template>
           </stats-card>
@@ -32,7 +32,7 @@
           >
 
             <template slot="footer">
-              <span class="text-danger mr-2"><i class="fa fa-arrow-down"></i> 5.72%</span>
+              <span class="mr-2"><i class="fa fa-arrow-down"></i> 5.72%</span>
               <span class="text-nowrap">Since last month</span>
             </template>
           </stats-card>
@@ -48,7 +48,7 @@
           >
 
             <template slot="footer">
-              <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 54.8%</span>
+              <span class="mr-2"><i class="fa fa-arrow-up"></i> 54.8%</span>
               <span class="text-nowrap">Since last month</span>
             </template>
           </stats-card>
@@ -68,30 +68,6 @@
                 :class="isRTL ? 'text-right' : 'text-left'"
               >
                 <h2 class="card-title">Break-Even Analysis</h2>
-              </div>
-              <div class="col-sm-6">
-                <div
-                  class="btn-group btn-group-toggle"
-                  :class="isRTL ? 'float-left' : 'float-right'"
-                  data-toggle="buttons"
-                >
-                  <label
-                    v-for="(option, index) in bigLineChartCategories"
-                    :key="option"
-                    class="btn btn-sm btn-primary btn-simple"
-                    :class="{active: bigLineChart.activeIndex === index}"
-                    :id="index"
-                  >
-                    <input
-                      type="radio"
-                      @click="initBigChart(index)"
-                      name="options"
-                      autocomplete="off"
-                      :checked="bigLineChart.activeIndex === index"
-                    >
-                    {{option}}
-                  </label>
-                </div>
               </div>
             </div>
           </template>
@@ -312,8 +288,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #fullscreen {
   height: 95vh;
+}
+#status-header .card {
+  background: var(--green) !important;
+  color: aliceblue;
 }
 </style>
